@@ -1,0 +1,4 @@
+[
+{"robot_id":"robot-a-01","task":"A"},{"robot_id":"robot-a-02","task":"A"},{"robot_id":"robot-a-03","task":"A"},{"robot_id":"robot-a-04","task":"A"},{"robot_id":"robot-a-05","task":"A"},{"robot_id":"robot-a-06","task":"A"},
+{"robot_id":"robot-b-01","task":"B"},{"robot_id":"robot-b-02","task":"B"},{"robot_id":"robot-b-03","task":"B"},{"robot_id":"robot-b-04","task":"B"},{"robot_id":"robot-b-05","task":"B"},{"robot_id":"robot-b-06","task":"B"}
+]

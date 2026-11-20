@@ -1,0 +1,68 @@
+
+# Python environments
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# PyCharm / VS Code
+.idea/
+.vscode/
+
+# Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# Generated datasets (preserve datasets/*.py)
+datasets/task_a_brushing/
+datasets/task_b_picking/
+datasets/teacher_approved/
+datasets/teacher_approved_synthetic/
+
+# Generated image and array files
+datasets/**/*.jpg
+datasets/**/*.jpeg
+datasets/**/*.png
+datasets/**/*.npy
+datasets/**/*.npz
+
+# Model weights (preserve models/*.py)
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+
+# MLflow experiment data
+mlruns/
+mlflow.db
+mlfow.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated outputs
+outputs/
+checkpoints/
+artifacts/
+logs/
+*.log
+
+# Operating system
+.DS_Store
+Thumbs.db
+# Generated teacher candidate records
+datasets/teacher_candidates/

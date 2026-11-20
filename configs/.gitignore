@@ -1,0 +1,81 @@
+
+# ==================================================
+# Python virtual environments and caches
+# ==================================================
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ==================================================
+# IDE configuration
+# ==================================================
+.idea/
+.vscode/
+
+# ==================================================
+# Environment variables and secrets
+# ==================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets.json
+
+# ==================================================
+# Generated datasets
+# Keep datasets/*.py source code
+# ==================================================
+datasets/task_a_brushing/
+datasets/task_b_picking/
+datasets/**/*.jpg
+datasets/**/*.jpeg
+datasets/**/*.png
+datasets/**/*.npz
+datasets/**/*.npy
+
+# ==================================================
+# Model weights and serialized artifacts
+# Keep models/*.py source code
+# ==================================================
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.h5
+*.hdf5
+*.pkl
+*.joblib
+
+# ==================================================
+# MLflow experiments and databases
+# ==================================================
+mlruns/
+mlflow.db
+mlfow.db
+*.db
+*.sqlite
+*.sqlite3
+
+# ==================================================
+# Generated experiment and release outputs
+# Keep release/*.py source code
+# ==================================================
+outputs/
+checkpoints/
+artifacts/
+logs/
+*.log
+
+# ==================================================
+# Operating system files
+# ==================================================
+.DS_Store
+Thumbs.db

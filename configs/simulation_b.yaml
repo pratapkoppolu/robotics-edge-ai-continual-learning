@@ -1,0 +1,16 @@
+simulation_only: true
+task: B
+historical_dataset_root: datasets/task_b_picking
+new_dataset_root: outputs/step11_simulated_b/new_data
+checkpoint: outputs/task_b_step6_backup/best.pt
+output_dir: outputs/step11_simulated_b/run_01
+tracking_uri: sqlite:///mlflow.db
+num_classes: 4
+replay_count: 8
+batch_size: 2
+seed: 42
+weight_decay: 0.0001
+device: auto
+stages:
+  - {phase: head, epochs: 1, head_lr: 0.0001, backbone_lr: 0.00001}
+  - {phase: late, epochs: 1, head_lr: 0.00005, backbone_lr: 0.000005}

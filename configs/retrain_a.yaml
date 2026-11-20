@@ -1,0 +1,19 @@
+task: A
+enable_training: false  # must be changed ONLY after real human approval + validated new data
+drift_report: outputs/drift_demo/task_a/report.json
+outcomes_report: outputs/continual_inputs/A/outcomes.json
+human_approval: outputs/continual_inputs/A/approval.json
+initial_checkpoint: outputs/task_a_step6_backup/best.pt
+historical_dataset_root: datasets/task_a_brushing
+new_dataset_root: datasets/new_validated_task_a
+validated_new_manifest: outputs/continual_inputs/A/validated_new.json
+replay_manifest: outputs/continual_inputs/A/replay.json
+output_dir: outputs/continual_a
+tracking_uri: sqlite:///mlflow.db
+image_size: 224
+batch_size: 4
+seed: 42
+weight_decay: 0.0001
+stages:
+  - {phase: head, epochs: 1, head_lr: 0.0001, backbone_lr: 0.00001}
+  - {phase: late, epochs: 1, head_lr: 0.00005, backbone_lr: 0.000005}

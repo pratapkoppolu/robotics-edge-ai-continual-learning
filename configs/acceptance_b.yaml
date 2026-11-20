@@ -1,0 +1,9 @@
+task: B
+comparison_path: outputs/step11_simulated_b/run_01/comparison.json
+candidate_checkpoint: outputs/step11_simulated_b/run_01/candidate_simulation_only.pt
+output_dir: outputs/step12_task_b
+# POC screening thresholds, NOT production safety criteria
+max_old_map50_drop: 0.05
+min_new_map50_gain: 0.00
+min_old_map50: 0.50
+min_new_map50: 0.50

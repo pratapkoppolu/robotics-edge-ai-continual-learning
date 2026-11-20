@@ -1,0 +1,22 @@
+# Gemini Developer API; keep data/task labels aligned to your existing dataset.
+api_base: https://generativelanguage.googleapis.com/v1beta
+#model_id: gemini-2.5-flash-lite
+model_id: gemini-3.5-flash-lite
+timeout_seconds: 120
+candidate_root: datasets/teacher_candidates
+
+datasets:
+  A: datasets/task_a_brushing
+  B: datasets/task_b_picking
+
+task_descriptions:
+  A: "Identify visible synthetic brushing target regions; boxes are proposals, not segmentation masks."
+  B: "Identify the single colored geometric object in the synthetic picking image."
+
+task_classes:
+  A:
+    0: brushing_target
+  B:
+    0: red_rectangle
+    1: green_ellipse
+    2: blue_rectangle

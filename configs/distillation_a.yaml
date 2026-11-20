@@ -1,0 +1,20 @@
+task_id: A
+dataset_root: datasets/task_a_brushing
+teacher_root: datasets/teacher_approved
+teacher_source: synthetic-oracle-smoke-test
+baseline_checkpoint: outputs/task_a_step6_backup/best.pt
+output_dir: outputs/distillation_a
+image_size: 224
+batch_size: 4
+epochs: 1
+lr: 0.00001
+weight_decay: 0.0001
+dice_weight: 0.5
+teacher_weight: 0.2
+seed: 42
+device: auto
+mlflow:
+  enabled: true
+  tracking_uri: sqlite:///mlflow.db
+  experiment_name: robotics_student_A_teacher_assisted
+  run_name: A_oracle_smoke_test

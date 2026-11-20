@@ -1,0 +1,19 @@
+task: B
+enable_training: false  # set true ONLY with confirmed failure and new validated labeled examples
+drift_report: outputs/drift_demo/task_b/report.json
+outcomes_report: outputs/continual_inputs/B/outcomes.json
+human_approval: outputs/continual_inputs/B/approval.json
+initial_checkpoint: outputs/task_b_step6_backup/best.pt
+historical_dataset_root: datasets/task_b_picking
+new_dataset_root: datasets/new_validated_task_b
+validated_new_manifest: outputs/continual_inputs/B/validated_new.json
+replay_manifest: outputs/continual_inputs/B/replay.json
+output_dir: outputs/continual_b
+tracking_uri: sqlite:///mlflow.db
+num_classes: 4
+batch_size: 2
+seed: 42
+weight_decay: 0.0001
+stages:
+  - {phase: head, epochs: 1, head_lr: 0.0001, backbone_lr: 0.00001}
+  - {phase: late, epochs: 1, head_lr: 0.00005, backbone_lr: 0.000005}

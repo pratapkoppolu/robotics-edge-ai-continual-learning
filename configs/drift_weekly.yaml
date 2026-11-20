@@ -1,0 +1,14 @@
+# Local demo inputs ONLY. Replace current_images with fresh weekly robot images.
+# Avoid using any reference-image duplicates in current_images.
+output_root: outputs/weekly_drift
+mlflow: true
+components: 6
+tasks:
+  A:
+    reference_images: datasets/task_a_brushing/train/images
+    current_images: outputs/drift_demo/task_a/current_dark
+    outcomes_json: null
+  B:
+    reference_images: datasets/task_b_picking/train/images
+    current_images: outputs/drift_demo/task_b/current_dark
+    outcomes_json: null
